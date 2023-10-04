@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +37,6 @@ Route::get('/Layout', function () {
 
 Route::get('/ProfileInfo', function () {
     return view('ProfileInfo');
-});
+})->name('profileInfo');
+
+Route::get('/Calendar', [CalendarController::class, 'someAction'])->name('Calendar');

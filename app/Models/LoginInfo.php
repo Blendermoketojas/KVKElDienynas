@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class LoginInfo extends Model
 {
-    use HasFactory;
+    public function profile()
+    {
+        return $this->hasOne(UserInfo::class, 'name', 'username');
+    }
 }

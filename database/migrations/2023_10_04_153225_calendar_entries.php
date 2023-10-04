@@ -13,16 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_profile', function (Blueprint $table) {
+        Schema::create('calendar_entries', function (Blueprint $table) {
             $table->id(); 
-            $table->string('username');
             $table->integer('user_id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('role');
-            $table->string('image_path');
-            $table->string('description');
-
+            $table->dateTime('date_from');
+            $table->dateTime('date_to');
+            $table->timestamps();
+            $table->string('event');
+            $table->string('event_place');
         });
     }
 

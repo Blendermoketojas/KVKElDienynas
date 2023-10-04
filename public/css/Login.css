@@ -134,7 +134,7 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7rem;
+  height: 6rem;
   background: linear-gradient(141deg, #58acfa 0%, #81bef7 51%, #a9d0f5 75%);
 }
 

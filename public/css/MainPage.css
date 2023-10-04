@@ -180,10 +180,10 @@ body {
 }
 
 .userIcon {
-  margin-right: 2%;
-  height: 3rem;
-  margin: 0% 1%;
+  height: 2.5rem;
+  margin: auto 1%;
   width: 4%;
+  vertical-align: middle;
 }
 
 .userName {
@@ -209,18 +209,13 @@ body {
 
 .layoutBtn {
   width: 10%;
-  background-color: #58a0e3;
+  background-color: #68b4fc;
   color: #fff;
   height: 100%;
   padding: 0.5em 1em;
   border: none rgba(0, 0, 0, 0);
   margin: 0 0;
   font-size: 15px;
-  border-right: solid rgba(0, 0, 0, 0.5);
-}
-
-.layoutBtn:first-of-type {
-  border-left: solid rgba(0, 0, 0, 0.5);
 }
 
 button {
@@ -239,7 +234,31 @@ button:hover {
   cursor: pointer;
 }
 
-.profileInput, textarea {
+.profileInput,
+textarea {
+  display: block;
+  margin: 0 auto;
+}
+
+.profileInfo {
+  background-color: rgb(242, 243, 247);
+  width: 40%;
+  margin: 3% auto;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 5%;
+}
+
+.confirmBtn {
+  width: 40%;
+  height: 10%;
+  font-size: 20px;
+}
+
+.profileIcon {
+  width: 10%;
+  height: 8%;
   display: block;
   margin: 0 auto;
 }/*# sourceMappingURL=MainPage.css.map */

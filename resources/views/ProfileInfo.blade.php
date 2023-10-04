@@ -1,7 +1,9 @@
 @extends('Layout')
 @section('ProfileInfo')
+
+<div class="profileInfo">
 <form action="">
-<img class='userIcon' src="{{ asset('images/UserIcon.png') }}" alt="UserIcon">
+<img class='profileIcon' src="{{ asset('images/UserIcon.png') }}" alt="UserIcon">
 
 <label for="fName">Vardas</label>
 <input class='profileInput' name='fName' type="text">
@@ -15,7 +17,9 @@
   
 </textarea>
 
-<button>Patvirtinti informacija</button>
+<button class="confirmBtn">Patvirtinti informacija</button>
 
 </form>
+
+</div>
 @endsection

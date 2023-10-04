@@ -15,17 +15,16 @@ class LoginController extends Controller
         $user = User::where('name', $data)->firstOrFail();
 
 
-
-
-
         if ($pass == $user->password) {
 
-            $req->session()->put('user', [
-                'name' => $data,
-            ]);
-            return view('Main', [
-                'user' => session('user')
-            ]);
+            // $req->session()->put('user', [
+            //     'name' => $data,
+            // ]);
+            // return view('Main', [
+            //     'user' => session('user')
+            // ]);
+            $req->session()->put('user', $user);
+            return view('Main');
         } else {
             $error = "Prisijungimas nepavyko";
             return view('Login', compact('error'));

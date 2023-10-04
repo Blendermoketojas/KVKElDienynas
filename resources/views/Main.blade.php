@@ -12,7 +12,7 @@
         <img class="logo" src="{{ asset('images/KVKlogo.png') }}" alt="KVK Logo">
         <div class="userInfo">
             <img class='userIcon' src="{{ asset('images/UserIcon.png') }}" alt="UserIcon">
-            <h1 class="userName">{{ $user['name'] }}</h1>
+            <h1 class="userName">{{ $user->name }}</h1>
             {{-- partempt is db --}}
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
@@ -22,7 +22,7 @@
     </div>  
     </div>
     <h1 class="mainText">Pasirinkite norimą puslapį:</h1>
-    <button>Profilio informacija</button>
+    <a  href='{{ route("profileInfo") }}'><button>Profilio informacija</button></a>
     <button>Mano kalendorius</button>
     <button>Dokumentai</button>
     <button>Mano rezultatai</button>
