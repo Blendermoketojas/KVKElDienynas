@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Session;
 use App\Models\LoginInfo;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -15,22 +16,14 @@ class LoginController extends Controller
         $user = User::where('name', $data)->firstOrFail();
 
 
-        if ($pass == $user->password) {
-
-            // $req->session()->put('user', [
-            //     'name' => $data,
-            // ]);
-            // return view('Main', [
-            //     'user' => session('user')
-            // ]);
-            $req->session()->put('user', $user);
-            return view('Main');
+        if ($pass === $user->password) {
+            return response()->json(['message' => 'Login successful', 'user' => $user], 200);
+        
         } else {
             $error = "Prisijungimas nepavyko";
-            return view('Login', compact('error'));
+            return response()->json(['error' => 'Invalid credentials'], 401);
         }
     }
-
 
     public function logout()
     {
@@ -38,4 +31,6 @@ class LoginController extends Controller
         return redirect('/Login');
        
     }
+
+
 }

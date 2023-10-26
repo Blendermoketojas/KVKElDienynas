@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CalendarController extends Controller
 {
-    public function someAction()
+    public function todaysDate()
     {
         $today = \Carbon\Carbon::now();
         return view('Calendar', ['date' => $today]);

@@ -18,7 +18,6 @@
         @csrf
             <div>
                 <label for="text">Prisijungimo vardas</label>
-
                 <input name='username' type="text">
             </div>
             <div>
