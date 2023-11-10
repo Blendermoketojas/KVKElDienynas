@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id(); 
             $table->string('username');
             $table->integer('user_id');
+            $table->string('group');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('role');

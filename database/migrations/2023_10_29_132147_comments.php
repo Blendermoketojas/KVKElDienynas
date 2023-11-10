@@ -17,6 +17,12 @@ return new class extends Migration
             $table->id();
             $table->integer('internship_id');
             $table->string('comment');
+            $table->integer('internship_id');
+            $table->string('comment');
+            $table->date('date_from');
+            $table->date('date_to');
+
+
         });
     }
 

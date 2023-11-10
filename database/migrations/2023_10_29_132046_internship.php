@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->date('date_from');
             $table->date('date_to');
+            $table->boolean('is_active');
 
         });
     }
