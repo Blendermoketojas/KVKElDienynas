@@ -14,13 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('internship', function (Blueprint $table) {
-            $table->id(); 
+            $table->id();
             $table->integer('company_id');
             $table->integer('user_id');
             $table->date('date_from');
             $table->date('date_to');
             $table->boolean('is_active');
-
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('internship');
     }
 };

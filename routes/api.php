@@ -29,6 +29,10 @@ Route::middleware('api')->group(function () {
     //     return view('Login');
     // })->name('auth');
 
+    Route::middleware('role.level:1,2,3')->group(function () {
+
+    });
+
     Route::post('/LoginCheck', [LoginController::class, 'login'])->name('login');
 
     Route::post('/userinfo', [UserInfoController::class, 'getUserInfo'])->name('userInfo');
