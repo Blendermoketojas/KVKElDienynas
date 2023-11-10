@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\UserInfo;
+use App\Models\UserProfile;
 
 class UserInfoController extends Controller
 {
@@ -13,7 +13,7 @@ class UserInfoController extends Controller
     {
         $userId = $request->input('userId');
 
-        $profile = UserInfo::where('user_id', $userId)->first();
+        $profile = UserProfile::where('user_id', $userId)->first();
 
         if ($profile) {
             return response()->json($profile);
@@ -29,7 +29,7 @@ class UserInfoController extends Controller
         $lastName = $request->input('lastName');
         $description = $request->input('description');
 
-        $profile = UserInfo::where('user_id',$profileId)->first();
+        $profile = UserProfile::where('user_id',$profileId)->first();
 
         if($profile){
             $profile->first_name = $firstName;

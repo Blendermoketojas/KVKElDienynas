@@ -44,4 +44,5 @@ Route::middleware('api')->group(function () {
     route::get('/pullevents', [InternshipController::class, 'pullEvents'])->name('pullEvents');
 
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 });

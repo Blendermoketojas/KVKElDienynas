@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Session;
-use App\Models\LoginInfo;
+use App\Models\UserCredentials;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +18,7 @@ class LoginController extends Controller
 
         if ($pass === $user->password) {
             return response()->json(['message' => 'Login successful', 'user' => $user], 200);
-        
+
         } else {
             $error = "Prisijungimas nepavyko";
             return response()->json(['error' => 'Invalid credentials'], 401);
@@ -29,7 +29,7 @@ class LoginController extends Controller
     {
         session()->flush();
         return redirect('/Login');
-       
+
     }
 
 
