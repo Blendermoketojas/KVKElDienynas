@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('group');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('role');
+            $table->integer('role');
             $table->string('image_path');
             $table->string('description');
             $table->timestamps();
