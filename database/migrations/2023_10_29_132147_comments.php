@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('calendar_entries', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id(); 
-            $table->integer('user_id');
-            $table->dateTime('date_from');
-            $table->dateTime('date_to');
-            $table->timestamps();
-            $table->string('event');
-            $table->string('event_place');
+            $table->integer('internship_id');
+            $table->string('comment');
+
         });
     }
 
