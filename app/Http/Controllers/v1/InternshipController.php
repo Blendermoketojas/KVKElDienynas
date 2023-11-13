@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\v1;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\internship;
+use Illuminate\Http\Request;
 
 class InternshipController extends Controller
 {
     public function sendEvent(Request $request){
-        
+
         $validatedData = $request->validate([
             'company_id' => 'required|integer',
             'user_id' => 'required|integer',
@@ -23,7 +24,7 @@ class InternshipController extends Controller
     }
     public function pullEvents(Request $request){
         $userId = $request->input('user_id');
-        
+
         $validatedData = $request->validate([
             'user_id' => 'required|integer',
         ]);

@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Session;
-use App\Models\UserCredentials;
-use Illuminate\Http\Request;
+namespace App\Http\Controllers\v1;
+use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -31,6 +29,4 @@ class LoginController extends Controller
         return redirect('/Login');
 
     }
-
-
 }
